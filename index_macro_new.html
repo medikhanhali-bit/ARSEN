@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Мой макрос</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;background:#11151a;color:#fff;font-family:Arial,sans-serif}
+.box{max-width:900px;margin:auto;padding:20px}
+.card{background:#1b2128;border-radius:16px;padding:20px}
+h1{text-align:center;font-size:28px;margin:0 0 15px}
+.sub{text-align:center;color:#aaa;margin-bottom:15px}
+textarea{width:100%;height:55vh;resize:vertical;background:#0d1117;color:#fff;border:1px solid #333;border-radius:10px;padding:12px;font-family:monospace;font-size:13px}
+button{width:100%;margin-top:14px;padding:15px;border:0;border-radius:10px;background:#238636;color:#fff;font-size:17px;font-weight:bold}
+button:active{transform:scale(.99)}
+</style>
+</head>
+<body>
+<div class="box"><div class="card">
+<h1>📋 Мой макрос</h1>
+<div class="sub">Нажми кнопку, чтобы скопировать макрос</div>
+<textarea id="macro" readonly></textarea>
+<button id="copy">📋 Копировать макрос</button>
+</div></div>
+<script>
+const macro = "[{\"Valid\":true,\"Type\":\"PlaceUnit\",\"Time\":8,\"Position\":\"114.7899169921875, -31.56873893737793, -60.852203369140625\",\"ID\":67,\"CF\":\"114.789917, -31.5687389, -60.8522034, -1, 0, -8.74227766e-08, 0, 1, 0, 8.74227766e-08, 0, -1\",\"Rotation\":180,\"Unit\":\"unit_trithorn\"},{\"ID\":67,\"Type\":\"ToggleAutoUpgrade\",\"Time\":8},{\"Valid\":true,\"Type\":\"PlaceUnit\",\"Time\":39,\"Position\":\"117.35037231445312, -31.568740844726562, -54.88652420043945\",\"ID\":120,\"CF\":\"117.350372, -31.5687408, -54.8865242, -1, 0, -8.74227766e-08, 0, 1, 0, 8.74227766e-08, 0, -1\",\"Rotation\":180,\"Unit\":\"unit_well\"},{\"ID\":120,\"Type\":\"ToggleAutoUpgrade\",\"Time\":40},{\"Valid\":true,\"Type\":\"PlaceUnit\",\"Unit\":\"unit_chicken_coop\",\"Rotation\":180,\"PathIndex\":1,\"Position\":\"22.728622436523438, -31.318737030029297, 33.974430084228516\",\"ID\":279,\"CF\":\"22.7286224, -31.318737, 33.9744301, 0.343581527, 0, -0.939122856, -0, 1, -0, 0.939122856, 0, 0.343581527\",\"Time\":101},{\"ID\":279,\"Type\":\"ToggleAutoUpgrade\",\"Time\":102},{\"Valid\":true,\"Type\":\"PlaceUnit\",\"Time\":167,\"Position\":\"126.63516235351562, -31.568744659423828, -59.707786560058594\",\"ID\":435,\"CF\":\"126.635162, -31.5687447, -59.7077866, -1, 0, -8.74227766e-08, 0, 1, 0, 8.74227766e-08, 0, -1\",\"Rotation\":180,\"Unit\":\"unit_castle\"},{\"ID\":435,\"Type\":\"ToggleAutoUpgrade\",\"Time\":168},{\"Valid\":true,\"Type\":\"PlaceUnit\",\"Time\":181,\"Position\":\"131.61158752441406, -31.568737030029297, -55.60419464111328\",\"ID\":469,\"CF\":\"131.611588, -31.568737, -55.6041946, -1, 0, -8.74227766e-08, 0, 1, 0, 8.74227766e-08, 0, -1\",\"Rotation\":180,\"Unit\":\"unit_egg_basket\"},{\"ID\":469,\"Type\":\"ToggleAutoUpgrade\",\"Time\":182},{\"Valid\":true,\"Type\":\"PlaceUnit\",\"Time\":185,\"Position\":\"132.49745178222656, -31.568737030029297, -50.545509338378906\",\"ID\":483,\"CF\":\"132.497452, -31.568737, -50.5455093, -1, 0, -8.74227766e-08, 0, 1, 0, 8.74227766e-08, 0, -1\",\"Rotation\":180,\"Unit\":\"unit_egg_basket\"},{\"ID\":483,\"Type\":\"ToggleAutoUpgrade\",\"Time\":186},{\"Valid\":true,\"Type\":\"PlaceUnit\",\"Time\":196,\"Position\":\"142.46139526367188, -31.568737030029297, -8.47597885131836\",\"ID\":520,\"CF\":\"142.461395, -31.568737, -8.47597885, -1, 0, -8.74227766e-08, 0, 1, 0, 8.74227766e-08, 0, -1\",\"Rotation\":180,\"Unit\":\"unit_sniper\"},{\"ID\":520,\"Type\":\"ToggleAutoUpgrade\",\"Time\":196},{\"Valid\":true,\"Type\":\"PlaceUnit\",\"Time\":207,\"Position\":\"133.66465759277344, -31.568737030029297, -69.30777740478516\",\"ID\":548,\"CF\":\"133.664658, -31.568737, -69.3077774, -1, 0, -8.74227766e-08, 0, 1, 0, 8.74227766e-08, 0, -1\",\"Rotation\":180,\"Unit\":\"unit_tree_golem\"},{\"ID\":548,\"Type\":\"ToggleAutoUpgrade\",\"Time\":208},{\"Valid\":true,\"Type\":\"PlaceUnit\",\"Time\":213,\"Position\":\"127.60580444335938, -31.568740844726562, -71.61553955078125\",\"ID\":557,\"CF\":\"127.605804, -31.5687408, -71.6155396, -1, 0, -8.74227766e-08, 0, 1, 0, 8.74227766e-08, 0, -1\",\"Rotation\":180,\"Unit\":\"unit_tree_golem\"},{\"ID\":557,\"Type\":\"ToggleAutoUpgrade\",\"Time\":214},{\"ID\":469,\"Type\":\"SellUnit\",\"Time\":263},{\"ID\":483,\"Type\":\"SellUnit\",\"Time\":264},{\"Valid\":true,\"Type\":\"PlaceUnit\",\"Time\":265,\"Position\":\"156.49932861328125, -31.568737030029297, -25.119552612304688\",\"ID\":706,\"CF\":\"156.499329, -31.568737, -25.1195526, -1, 0, -8.74227766e-08, 0, 1, 0, 8.74227766e-08, 0, -1\",\"Rotation\":180,\"Unit\":\"unit_egg_basket\"},{\"ID\":706,\"Type\":\"ToggleAutoUpgrade\",\"Time\":266},{\"Valid\":true,\"Type\":\"PlaceUnit\",\"Time\":268,\"Position\":\"156.93821716308594, -31.568737030029297, -5.774080276489258\",\"ID\":711,\"CF\":\"156.938217, -31.568737, -5.77408028, -1, 0, -8.74227766e-08, 0, 1, 0, 8.74227766e-08, 0, -1\",\"Rotation\":180,\"Unit\":\"unit_egg_basket\"},{\"ID\":711,\"Type\":\"ToggleAutoUpgrade\",\"Time\":269},{\"ID\":706,\"Type\":\"SellUnit\",\"Time\":273},{\"Valid\":true,\"Type\":\"PlaceUnit\",\"Time\":274,\"Position\":\"141.37599182128906, -31.568737030029297, 17.61423110961914\",\"ID\":719,\"CF\":\"141.375992, -31.568737, 17.6142311, -1, 0, -8.74227766e-08, 0, 1, 0, 8.74227766e-08, 0, -1\",\"Rotation\":180,\"Unit\":\"unit_egg_basket\"},{\"ID\":719,\"Type\":\"ToggleAutoUpgrade\",\"Time\":275},{\"ID\":711,\"Type\":\"SellUnit\",\"Time\":279},{\"Valid\":true,\"Type\":\"PlaceUnit\",\"Time\":280,\"Position\":\"118.03753662109375, -31.568737030029297, 30.058162689208984\",\"ID\":727,\"CF\":\"118.037537, -31.568737, 30.0581627, -1, 0, -8.74227766e-08, 0, 1, 0, 8.74227766e-08, 0, -1\",\"Rotation\":180,\"Unit\":\"unit_egg_basket\"},{\"ID\":727,\"Type\":\"ToggleAutoUpgrade\",\"Time\":281},{\"ID\":719,\"Type\":\"SellUnit\",\"Time\":283},{\"Valid\":true,\"Type\":\"PlaceUnit\",\"Time\":284,\"Position\":\"92.52558898925781, -31.568737030029297, 34.03395462036133\",\"ID\":733,\"CF\":\"92.525589, -31.568737, 34.0339546, -1, 0, -8.74227766e-08, 0, 1, 0, 8.74227766e-08, 0, -1\",\"Rotation\":180,\"Unit\":\"unit_egg_basket\"},{\"ID\":733,\"Type\":\"ToggleAutoUpgrade\",\"Time\":285}]";
+document.getElementById("macro").value = macro;
+document.getElementById("copy").onclick = async () => {
+  try { await navigator.clipboard.writeText(macro); }
+  catch(e) {
+    const textarea=document.getElementById("macro");
+    textarea.focus(); textarea.select(); document.execCommand("copy");
+  }
+  document.getElementById("copy").textContent="✅ Скопировано!";
+  setTimeout(()=>document.getElementById("copy").textContent="📋 Копировать макрос",1500);
+};
+</script>
+</body>
+</html>
